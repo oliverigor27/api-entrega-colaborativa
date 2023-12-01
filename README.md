@@ -1,73 +1,62 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+# API de Entrega Colaborativa 📨
+<div align="left">
+    <img align="center" src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white">
+    <img align="center" src="https://img.shields.io/badge/Express.js-404D59?style=for-the-badge">
+    <img align="center" src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white">
+    <img align="center" src="https://img.shields.io/badge/Prisma-3982CE?style=for-the-badge&logo=Prisma&logoColor=white">
+</div>
+<br />
+A Entrega Colaborativa API é uma plataforma que permite a conexão entre indivíduos e empresas para facilitar a entrega de produtos e serviços, por meio de uma rede de entregadores colaborativos. Esta API foi desenvolvida com TypeScript, Node.JS, PostgreSQL e utiliza o padrão MVC.
+Objetivo
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+O objetivo da API é permitir que pessoas interessadas em enviar pacotes ou fazer entregas possam se conectar com outras dispostas a transportar esses itens em seus trajetos diários. Isso cria uma rede de entregadores colaborativos que possibilita o transporte de mercadorias de forma mais rápida e eficiente.
+Endpoints
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+A API possui os seguintes endpoints principais:
 
-## Description
+    Cadastro de Usuário: Permite que novos usuários sejam cadastrados no sistema, fornecendo nome, email e senha.
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+    Autenticação de Usuário: Permite que usuários cadastrados façam login no sistema e recebam um token de autenticação.
 
-## Installation
+    Criação de Entrega: Usuários autenticados podem criar solicitações de entrega informando origem, destino, descrição e data prevista.
 
-```bash
-$ npm install
-```
+    Listagem de Entregas: Retorna a lista de todas as entregas cadastradas no sistema.
 
-## Running the app
+    Atualização de Status de Entrega: Permite que um entregador atualize o status de uma entrega em andamento.
 
-```bash
-# development
-$ npm run start
+Tecnologias Utilizadas
 
-# watch mode
-$ npm run start:dev
+- TypeScript
+- Node.JS
+- Prisma
+- NestJS
+- PostgreSQL
+- Docker
 
-# production mode
-$ npm run start:prod
-```
+Como Executar o Projeto
 
-## Test
+- Certifique-se de ter o Node.JS instalado em sua máquina.
+- Clone este repositório: git clone https://github.com/oliverigor27/API-de-Entrega-Colaborativa.git
+- Acesse o diretório do projeto: cd entrega-colaborativa-api
+- Instale as dependências: npm install
+- Configure as variáveis de ambiente (como banco de dados) no arquivo .env.
+- Execute o servidor: npm start
 
-```bash
-# unit tests
-$ npm run test
+Documentação da API
 
-# e2e tests
-$ npm run test:e2e
+Para mais detalhes sobre os endpoints disponíveis e exemplos de uso, consulte a Documentação da API.
+Contribuindo
 
-# test coverage
-$ npm run test:cov
-```
+Contribuições são bem-vindas! Se você deseja colaborar com melhorias, correções de bugs ou adicionar novos recursos, siga as etapas abaixo:
 
-## Support
+- Faça um fork deste repositório.
+- Crie uma branch com sua feature ou correção: git checkout -b minha-feature
+- Commit suas alterações: git commit -m "Minha contribuição: descrição da alteração"
+- Envie a branch para o seu fork: git push origin minha-feature
+- Abra um Pull Request para este repositório.
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+## Suporte
 
-## Stay in touch
+Em caso de dúvidas ou problemas, entre em contato com a equipe de suporte da API pelo email: igoroliveira2798@gmail.com.
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
+Agradecemos por contribuir com a Entrega Colaborativa API e esperamos que ela seja útil para facilitar a entrega de produtos e serviços de forma colaborativa!
