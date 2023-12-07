@@ -50,11 +50,15 @@ Para executar os testes, siga as instruções abaixo:
 - Acesse o diretório do projeto: `cd entrega-colaborativa-api`
 - Instale as dependências: `npm install`
 - Configure as variáveis de ambiente (como banco de dados) no arquivo `.env`.
-- Execute o servidor: `npm start`
+- Execute o servidor: `npm run start:dev`
 
 ## Documentação da API
 
 Para mais detalhes sobre os endpoints disponíveis e exemplos de uso, consulte a [Documentação da API](link_para_documentacao).
+
+## Swagger
+
+A API conta com uma documentação interativa utilizando o Swagger. Você pode acessar a documentação em tempo real através do link: [http://localhost:3000/api/v1](http://localhost:3000/api/v1).
 
 ## Contribuindo
 
