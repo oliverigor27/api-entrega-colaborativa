@@ -46,7 +46,8 @@ export class CompleteRegisterDTO {
     readonly country : string;
 
     @ApiProperty({
-        description: "Federal Id card where the user lives"
+        description: "Federal Id card where the user lives",
+        minLength: 8
     })
     @IsNotEmpty()
     @IsString()
