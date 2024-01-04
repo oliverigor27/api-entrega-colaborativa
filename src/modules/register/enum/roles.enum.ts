@@ -1,4 +1,4 @@
 export enum Roles {
-    Receiver = "receiver",
+    User = 'user',
     Postman = "postman"
 }
