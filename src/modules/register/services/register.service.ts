@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { BadRequestException, Injectable } from '@nestjs/common';
 import { RegisterRepository } from '../repositories/register.repository';
 import { RegisterDto } from '../dto/register.dto';
 
@@ -9,7 +9,16 @@ export class RegisterService {
     constructor(private readonly registerRepository: RegisterRepository) {}
 
     async create(data: RegisterDto) {
-        return this.registerRepository.createUser(data);
+        try {
+            if (data.role === "user") return await this.registerRepository.createUser(data);
+            
+            return await this.registerRepository.createPostman(data);
+
+        } catch (error) {
+            // Tratar erro assíncrono aqui, se necessário.
+            throw new Error("Erro when tried to create a new user!" + error.message);
+        }
     }
+    
 
 }
