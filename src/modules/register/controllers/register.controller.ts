@@ -5,7 +5,7 @@ import { RegisterDto } from "../dto/register.dto";
 import { LogInterceptor } from "src/infra/interceptors/log.interceptor";
 
 
-@ApiTags("Register")
+@ApiTags("User Register")
 @Controller("register")
 export class RegisterController {
     constructor(private readonly registerService : RegisterService) {}
