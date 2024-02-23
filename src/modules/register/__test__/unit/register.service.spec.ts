@@ -2,7 +2,7 @@ import { Test, TestingModule } from "@nestjs/testing";
 import { RegisterService } from "../../services/register.service";
 import { RegisterRepository } from "../../repositories/register.repository";
 import { PrismaService } from "src/infra/prisma/services/prisma.service";
-import { RegisterDto } from "../../dto/register.dto";
+import { RegisterDto } from "../../Dto/register.dto";
 import { Roles } from "../../enum/roles.enum";
 import { BadRequestException } from "@nestjs/common";
 
