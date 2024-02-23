@@ -1,6 +1,6 @@
 import { BadRequestException, Injectable } from '@nestjs/common';
 import { RegisterRepository } from '../repositories/register.repository';
-import { RegisterDto } from '../dto/register.dto';
+import { RegisterDto } from "../Dto/register.dto"
 
 
 @Injectable()
@@ -10,9 +10,12 @@ export class RegisterService {
 
     async create(data: RegisterDto) {
         try {
+
             if (data.role === "user") return await this.registerRepository.createUser(data);
             
-            return await this.registerRepository.createPostman(data);
+            const result = await this.registerRepository.createPostman(data);
+            
+            return result;
 
         } catch (error) {
             // Tratar erro assíncrono aqui, se necessário.
