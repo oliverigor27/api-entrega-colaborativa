@@ -1,8 +1,7 @@
 import { PrismaService } from "src/infra/prisma/services/prisma.service";
-import { RegisterDto } from "../dto/register.dto";
+import { RegisterDto } from "../Dto/register.dto";
 import { IRegisterInterface } from "./Iregister.repository";
 import { BadRequestException, Injectable } from "@nestjs/common";
-import { CompleteRegisterDTO } from "../../users/dto/completeRegister.dto";
 
 @Injectable()
 export class RegisterRepository implements IRegisterInterface {
@@ -12,14 +11,18 @@ export class RegisterRepository implements IRegisterInterface {
         throw new Error("Method not implemented.");
     }
 
-    async createUser(data: RegisterDto): Promise<{ message: string, id: string }> {
+    async createUser(data: RegisterDto): Promise<{ isValid: boolean, id: string } | boolean> {        
+
         const createReceiver = await this.prismaService.user.create({
-            data
+             data
         });
 
+        if(!createReceiver) return false;
+
         return {
-            message: "User created successfully!",
+            isValid: true,
             id: createReceiver.id
-        }
+        }   
+
     }
 }
