@@ -1,9 +1,8 @@
 import { Body, Controller, Param, Post, UseInterceptors } from "@nestjs/common";
 import { ApiTags } from "@nestjs/swagger";
 import { RegisterService } from "../services/register.service";
-import { RegisterDto } from "../dto/register.dto";
 import { LogInterceptor } from "src/infra/interceptors/log.interceptor";
-
+import { RegisterDto } from "../Dto/register.dto";
 
 @ApiTags("User Register")
 @Controller("register")
