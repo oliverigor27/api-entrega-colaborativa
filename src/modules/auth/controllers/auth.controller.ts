@@ -1,4 +1,4 @@
-import { Body, Controller, Post, Res } from "@nestjs/common";
+import { BadRequestException, Body, Controller, Post, Res } from "@nestjs/common";
 import { LoginDto } from "src/modules/auth/Dto/login.dto";
 import { AuthService } from "../services/auth.service";
 import { Response } from "express";
@@ -11,9 +11,9 @@ export class AuthController
     constructor(private readonly authService: AuthService) {}
 
     @Post("sign-in")
-    async loginUSer(@Body() data: LoginDto, @Res() res: Response)
+    async loginUSer(@Body() { email, password }: LoginDto, @Res() res: Response)
     {
-        let authToken = this.authService.singIn(data);
+        let authToken = this.authService.singIn({ email, password });
 
         return res.status(200).json({
             message: "Successful login!",
